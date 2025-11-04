@@ -2,6 +2,19 @@
 
 This project is a React Native Expo app that demonstrates semantic vector search using Supabase pgvector and OpenAI embeddings. It was originally built from an Expo starter, now upgraded to a full-stack AI demo.
 
+## 📸 Screenshots
+
+### 🧮 Supabase Database View
+Shows employee embeddings stored in Supabase (pgvector column):
+![Supabase Embeddings](./assets/vector_embeddings.png)
+
+### 🔍 Semantic Employee Search (React Native App)
+Example query: “Find marketing employees with bonuses”
+
+<p align="center">
+  <img src="./assets/Search.png" alt="Search Pic" width="300"/>
+</p>
+
 ## Features
 
 * 🔍 Perform semantic search on employee data using vector embeddings
