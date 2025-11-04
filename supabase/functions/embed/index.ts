@@ -1,14 +1,13 @@
 //for inserting and searching embeddings
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
-import OpenAI from "https://deno.land/x/openai@v4/mod.ts";
+import OpenAI from "https://esm.sh/openai@4.56.0";
 
 
 const openai = new OpenAI({ apiKey: Deno.env.get("OPENAI_API_KEY") });
 const supabase = createClient(
-  Deno.env.get("PROJECT_URL")
-Deno.env.get("SERVICE_ROLE_KEY")
-
+  Deno.env.get("PROJECT_URL")!,
+  Deno.env.get("SERVICE_ROLE_KEY")!
 );
 //function to handle embedding insertion and searching
 serve(async (req) => {
